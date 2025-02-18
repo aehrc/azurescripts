@@ -14,5 +14,7 @@ while pgrep -f apt-get || pgrep -f dpkg; do
     exit 1
   fi
 done
+sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get install openjdk-7-jdk -y
 echo "System appears stable. Exiting."
 exit 0
